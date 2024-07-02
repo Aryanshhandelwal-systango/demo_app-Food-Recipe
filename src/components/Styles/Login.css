@@ -1,87 +1,56 @@
-/* General Styles */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  /* Container for the Form */
-  div {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-  }
-  
-  /* Form Header */
-  h2 {
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-    color: #333;
-  }
-  
-  /* Form Element Styles */
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Input Container */
-  div > div {
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-  
-  /* Input Labels */
-  label {
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 0.5rem;
-    display: block;
-  }
-  
-  /* Input Fields */
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-    margin-top: 0.5rem;
-  }
-  
-  /* Input Field Focus */
-  input[type="email"]:focus,
-  input[type="password"]:focus {
-    border-color: #5995fd;
-    outline: none;
-    box-shadow: 0 0 5px rgba(89, 149, 253, 0.5);
-  }
-  
-  /* Submit Button */
-  button[type="submit"] {
-    padding: 0.7rem;
-    font-size: 1rem;
-    background-color: #5995fd;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 1rem;
-  }
-  
-  /* Submit Button Hover Effect */
-  button[type="submit"]:hover {
-    background-color: #4d84e2;
-  }
-  
+
+
+.login-container {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-left: 512px;
+  margin-top: 150px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0662c5;
+  color: rgb(252, 252, 246);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+ button:hover {
+  background-color: #0056b3;
+} 
+ 

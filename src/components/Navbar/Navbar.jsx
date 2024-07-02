@@ -1,67 +1,90 @@
-import React  from 'react';
-import { useNavigate } from 'react-router-dom';
 
-// import cartIcon from '../../assets/Icon-04 1.svg';
-// import profileIcon from '../../assets/Icon-03 1.svg';
-// import searchIcon from '../../assets/Icon-02 1.svg';
-// import logo from '../../assets/logo.png'
-import {NavLink} from 'react-router-dom';
-import {Container, Row} from 'reactstrap';
-//import Product from '../Product/product';
+// import React from 'react';
+// import { NavLink } from 'react-router-dom';
+// import { Container, Row } from 'reactstrap';
+// import '../Styles/Navbar.css';
 
+// const navlinks = [
+//   {
+//     path: '/New-Recipe',
+//     display: 'New Recipe'
+//   },
+//   {
+//     path: '/Saved-Recipe',
+//     display: 'Saved Recipe'
+//   },
+// ];
+
+// const Navbar = ({ onLogout }) => {
+//   return (
+//     <header className="header">
+//       <Container>
+//         <Row>
+//           <div className="nav_wrapper">
+//             <div className="logo">MyApp</div>
+//             <div className="navigation">
+//               <ul className="menu">
+//                 {navlinks.map((item, index) => (
+//                   <li className="nav_item" key={index}>
+//                     <NavLink to={item.path} className={(navClass) => navClass.isActive ? 'nav_active' : ''}>
+//                       {item.display}
+//                     </NavLink>
+//                   </li>
+//                 ))}
+//               </ul>
+//             </div>
+//             <button className="logout_button" onClick={onLogout}>Logout</button>
+//           </div>
+//         </Row>
+//       </Container>
+//     </header>
+//   );
+// };
+
+// export default Navbar;
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { Container, Row } from 'reactstrap';
+import '../Styles/Navbar.css';
 
 const navlinks = [
   {
-    path:'/New-Recipe',
-    diplay:'New Recipe'
+    path: '/New-Recipe',
+    display: 'New Recipe'
   },
   {
-    path:'/Saved-Recipe',
-    diplay:'Saved Recipe'
+    path: '/Saved-Recipe',
+    display: 'Saved Recipe'
   },
+];
 
-]
-
-function Navbar() {
-
-
-  
+const Navbar = ({ onLogout }) => {
   return (
-    <div>
-    <header className='header'>
+    <header className="header">
       <Container>
         <Row>
-          <div className='nav_wrapper'>
-            <div className='logo'>
-              <img src={logo} alt='logo' />
+          <div className="nav_wrapper">
+            <div className="logo">MyApp</div>
+            <div className="nav_links_logout">
+              <div className="navigation">
+                <ul className="menu">
+                  {navlinks.map((item, index) => (
+                    <li className="nav_item" key={index}>
+                      <NavLink to={item.path} className={(navClass) => navClass.isActive ? 'nav_active' : ''}>
+                        {item.display}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <button className="logout_button" onClick={onLogout}>Logout</button>
             </div>
-            <div className='navigation'>
-              <ul className='menu'>
-               {navlinks.map((item,index) => (
-                <li className='nav_item' key={index}>
-                  <NavLink to={item.path} className={(navClass) =>navClass.isActive ? 'nav_active' : ''}>{item.diplay}</NavLink>
-                </li>
-               ))}
-              </ul>
-            </div>
-{/* 
-            <div className='nav_icons'>
-              <span className='search_icon'>
-              <img src={searchIcon} alt='searchIcon' />
-              </span>
-              <span className='profileIcon'>
-              <img src={profileIcon} alt='profileIcon' />
-               </span>
-            </div> */}
           </div>
-            
-          
         </Row>
       </Container>
     </header>
-    
-    </div>
-  )
-}
+  );
+};
 
 export default Navbar;
+   
